@@ -19,7 +19,9 @@ export const cheatSheetData: Item[] = [
     code: `
 console.log("text"); // 改行あり
 process.stdout.write("text"); // 改行なし
-console.error("text"); // 標準エラー出力（改行あり）
+console.error("text"); // 標準エラー出力
+
+console.log(1, "a", { b: 2 }); // 1 a { b: 2 }
 `,
   },
   {
@@ -90,6 +92,7 @@ for (const v of Object.values(o)) {
 const n1: number = 42;
 const n2: number = 3.1415;
 const s: string = "text";
+const a: number[] = [1, 2, 3];
 const o1: { a: number; b: number } = { a: 1, b: 2 };
 const o2: { [keys: string]: number } = { "1": 1, あ: 2 };
 `,
@@ -106,6 +109,50 @@ console.log(5 / 2); // 2.5
 console.log(7 % 5); // 2
 console.log(2 ** 3); // 8
 console.log(2 ** -1); // 0.5
+`,
+  },
+  {
+    category: "Math",
+    name: "数値計算（小数点以下）",
+    code: `
+// 切り捨て（n以下の最大の整数。-側）
+Math.floor(2.1); // 2
+Math.floor(-2.1); // -3
+
+// 切り上げ（n以上の最小の整数。+側）
+Math.ceil(2.1); // 3
+Math.ceil(-2.1); // -2
+
+// 四捨五入
+Math.round(2.4); // 2
+Math.round(2.5); // 3
+Math.round(-2.5); // -2
+Math.round(-2.6); // -3
+
+// 小数点以下削除
+Math.trunc(2.1); // 2
+Math.trunc(-2.1); // -2
+`,
+  },
+  {
+    category: "Math",
+    name: "数値計算（符号）",
+    code: `
+// 絶対値
+Math.abs(-42); // 42
+
+// 符号
+Math.sign(3); // 1
+Math.sign(0); // 0
+Math.sign(-3); // -1
+`,
+  },
+  {
+    category: "Math",
+    name: "数値比較",
+    code: `
+Math.min(-1, 0, 2); // -1
+Math.max(-1, 0, 2); // 2
 `,
   },
   {
@@ -126,6 +173,25 @@ const s4 = \`num: \${v}\`; // num: 42
     code: `
 const s = "\\n  aaa  \\n"
 s.trim() // "aaa"
+`,
+  },
+  {
+    category: "String",
+    name: "ゼロパディング（0埋め）",
+    code: `
+// 文字列化してから処理する
+String(12).padStart(4, "0"); // 0012
+`,
+  },
+  {
+    category: "Data",
+    name: "配列の分割代入",
+    code: `
+const array = [1, 2, 3];
+const [a, b, c] = array; // 1, 2, 3
+const [d, e] = array;    // 1, 2
+const [f, ...g] = array; // 1, [2, 3]
+const [h, , i] = array;  // 1, 3
 `,
   },
 ];
