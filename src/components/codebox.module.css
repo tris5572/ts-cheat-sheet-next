@@ -1,0 +1,21 @@
+.box {
+  border: 1px solid hsl(336, 6%, 84%);
+  border-radius: 8px;
+  background: white;
+  margin: 12px;
+}
+
+.name {
+  background: hsl(338, 6%, 38%);
+  color: rgb(228, 220, 223);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 2px 12px;
+  font-size: 12px;
+  font-family: var(--font-mono);
+}
+
+.pre {
+  margin: 4px 12px 8px;
+  /* font-size: 1.1em; */
+}
