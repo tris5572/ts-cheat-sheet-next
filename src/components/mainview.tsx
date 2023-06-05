@@ -4,7 +4,7 @@ import CodeBox from "./codebox";
 
 export default function MainView(props: { items: Item[] }) {
   return (
-    <div className={styles.flex}>
+    <div className={styles.mainview}>
       {props.items.map((v) => (
         <CodeBox item={v} key={v.name} />
       ))}

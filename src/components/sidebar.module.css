@@ -2,6 +2,9 @@
   height: 100dvh;
   display: flex;
   flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 200px;
   background-color: hsl(340, 5%, 95%);
   padding: 16px 0;

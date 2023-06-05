@@ -2,8 +2,9 @@
   margin: 12px;
 }
 
-.flex {
+.mainview {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+  margin-left: 200px;
 }
