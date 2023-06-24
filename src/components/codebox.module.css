@@ -3,6 +3,7 @@
   border-radius: 8px;
   background: white;
   margin: 12px;
+  width: calc(50% - 50px);
 }
 
 .name {
@@ -19,4 +20,5 @@
   margin: 4px 12px 8px;
   /* font-size: 0.8em; */
   line-height: 1.2em;
+  white-space: pre-wrap;
 }
