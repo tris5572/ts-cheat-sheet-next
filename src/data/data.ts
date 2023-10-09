@@ -124,15 +124,15 @@ Math.floor(-2.1); // -3
 Math.ceil(2.1); // 3
 Math.ceil(-2.1); // -2
 
+// 小数点以下削除
+Math.trunc(2.1); // 2
+Math.trunc(-2.1); // -2
+
 // 四捨五入
 Math.round(2.4); // 2
 Math.round(2.5); // 3
 Math.round(-2.5); // -2
 Math.round(-2.6); // -3
-
-// 小数点以下削除
-Math.trunc(2.1); // 2
-Math.trunc(-2.1); // -2
 `,
   },
   {
@@ -196,6 +196,26 @@ const s = "abcaA";
 const c = "a";
 (s.match(new RegExp(c, "g")) || []).length; // 2
 (s.match(new RegExp(c, "gi")) || []).length; // 3
+`,
+  },
+  {
+    category: "Data",
+    name: "配列の初期化",
+    code: `
+// 空の配列
+const a: number[] = []; // []
+a.push(42); // [42]
+
+// 長さを指定
+const b = new Array(3); // [undefined, undefined, undefined]
+b[0] = 5; // [5, undefined, undefined]
+b[1] = 7; // [5, 7, undefined]
+
+// 初期値で満たす
+const c = new Array(3).fill(-1); // [-1, -1, -1]
+// 初期値で配列やオブジェクトを使うと、全部共有される
+const d = new Array(3).fill([1]); // [[1], [1], [1]]
+d[0].push(2); // [[1,2], [1,2], [1,2]]
 `,
   },
   {
